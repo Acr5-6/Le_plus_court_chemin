@@ -43,7 +43,7 @@ java -Xms1280m -Xmx1280m -cp "target/osm-0.2.2-neo4j-3.5.1.jar:target/dependency
 ```
 
 
-#### Traitement
+## Traitement
 #Lancez neo4j:
 ```
 neo4j console
@@ -114,15 +114,7 @@ WITH a,a.name + toString(a.location.latitude) + toString(a.location.longitude) A
 SET a.poi_id = poi
 ```
 
-#### Requêtes utiles pour le design et la fonctionnalité A* de l'application
-##ASTAR
-#Ajouter les attributs "lat" et "lon" pour les noeuds ROOTABLE 
-```
-MATCH (n:Routable)<-[:ROUTE]-(o:PointOfInterest) 
-WHERE NOT EXISTS(n.lat) AND NOT EXISTS(n.lon) 
-SET n.lat=o.lat,n.lon=o.lon 
-RETURN n;
-```
+## Requêtes utiles pour le design et la fonctionnalité A* de l'application
 
 #Ajouter l'attribut "amenity" pour les POI ayant une relation TAGS à un amenity
 ```
@@ -140,8 +132,16 @@ SET n.amenity=bar
 RETURN n;
 ```
 
+### ASTAR
+#Ajouter les attributs "lat" et "lon" pour les noeuds ROOTABLE 
+```
+MATCH (n:Routable)<-[:ROUTE]-(o:PointOfInterest) 
+WHERE NOT EXISTS(n.lat) AND NOT EXISTS(n.lon) 
+SET n.lat=o.lat,n.lon=o.lon 
+RETURN n;
+```
 
-#### Application
+## Application
 #Neo4j étant toujours actif, ouvrez une autre fenêtre terminal/console, placez-vous dans le dossier osm_rooting_React_Neo4j.
 
 
