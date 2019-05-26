@@ -143,6 +143,12 @@ RETURN n;
 
 ## Application
 #Initialisez vos variables d'environnement dans le fichier osm_rooting_React_Neo4j/.env
+```
+REACT_APP_NEO4J_URI=XXX
+REACT_APP_NEO4J_USER=XXX
+REACT_APP_NEO4J_PASSWORD=XXX
+REACT_APP_MAPBOX_TOKEN=XXX
+```
 
 #Neo4j étant toujours actif, ouvrez une autre fenêtre terminal/console, placez-vous dans le dossier osm_rooting_React_Neo4j.
 
