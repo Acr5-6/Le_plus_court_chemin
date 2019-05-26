@@ -42,6 +42,13 @@ java -Xms1280m -Xmx1280m -cp target\osm-0.2.2-neo4j-3.5.1.jar;target\dependency\
 java -Xms1280m -Xmx1280m -cp "target/osm-0.2.2-neo4j-3.5.1.jar:target/dependency/*" org.neo4j.gis.osm.OSMImportTool --skip-duplicate-nodes --delete --into target/databases/marseille samples/Marseille.osm.
 ```
 
+#déplacez le dossier target/databases/marseille dans neo4j-community-X.X.X/data/databases
+
+#Activer cette base de données dans neo4j-community-3.5.5/conf/neo4j.conf:
+```
+# The name of the database to mount
+dbms.active_database=marseille
+```
 
 ## Traitement
 #Lancez neo4j:
