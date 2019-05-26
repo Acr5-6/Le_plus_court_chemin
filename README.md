@@ -32,13 +32,13 @@ mvn dependency:copy-dependencies
 
 
 #En fonction de votre système, effectuez l'une de ces deux commandes suivantes :
-#Windows
 ```
+#Windows
 java -Xms1280m -Xmx1280m -cp target\osm-0.2.2-neo4j-3.5.1.jar;target\dependency\* org.neo4j.gis.osm.OSMImportTool --skip-duplicate-nodes --delete --into target\databases\marseille samples\Marseille.osm
 ```
 
-#Linux
 ```
+#Linux
 java -Xms1280m -Xmx1280m -cp "target/osm-0.2.2-neo4j-3.5.1.jar:target/dependency/*" org.neo4j.gis.osm.OSMImportTool --skip-duplicate-nodes --delete --into target/databases/marseille samples/Marseille.osm.
 ```
 
