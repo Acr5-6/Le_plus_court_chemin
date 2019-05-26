@@ -142,8 +142,9 @@ RETURN n;
 ```
 
 ## Application
-#Neo4j étant toujours actif, ouvrez une autre fenêtre terminal/console, placez-vous dans le dossier osm_rooting_React_Neo4j.
+#Initialisez vos variables d'environnement dans le fichier osm_rooting_React_Neo4j/.env
 
+#Neo4j étant toujours actif, ouvrez une autre fenêtre terminal/console, placez-vous dans le dossier osm_rooting_React_Neo4j.
 
 #puis faites :
 ```
